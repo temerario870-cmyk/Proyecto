@@ -1,0 +1,9 @@
+console.log(alert("¿quieres ver esta pagina sobre gatos?"));
+ function saludar() {
+            let nombre = document.getElementById("nombre").value;
+            if (nombre.trim() !== "") {
+                alert("Saluditos a " + nombre );
+            } else {
+                alert("Por favor, escribe el nombre de tu mascota.");
+            }
+        }

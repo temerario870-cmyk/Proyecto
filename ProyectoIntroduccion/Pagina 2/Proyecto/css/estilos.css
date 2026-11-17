@@ -1,0 +1,97 @@
+/* Variables */
+:root{--texto:#222;--fondo:#f5f5f5;--borde:#ccc;--acento:#2b4a8c}
+
+/* Base */
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.5;color:var(--texto);background:var(--fondo)}
+img{max-width:100%;height:auto}
+a{color:var(--acento)}
+dt{font-weight:bold}
+dd{margin:0 0 .5rem 1rem}
+.sin-vineta{list-style:none;padding:0}
+
+/* Cabecera y menú */
+.barra{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem;background:var(--acento);padding:.6rem 1rem}
+.marca{display:flex;align-items:center;gap:.5rem;color:#fff;font-weight:bold;text-decoration:none}
+#menu ul{display:flex;gap:.3rem;list-style:none;margin:0;padding:0}
+#menu a{display:block;color:#fff;text-decoration:none;padding:.4rem .8rem}
+#menu a:hover,#menu a[aria-current]{background:rgba(255,255,255,.2)}
+.menu-btn{display:none;background:none;color:#fff;border:1px solid #fff;padding:.3rem .8rem;font:inherit;cursor:pointer}
+.cabecera{text-align:center;padding:1.5rem 1rem;background:#fff;border-bottom:1px solid var(--borde)}
+.cabecera h1{margin:0;font-size:2rem}
+.cabecera p{margin:.3rem 0 0;color:#555}
+
+/* Contenido */
+main{max-width:960px;margin:0 auto;padding:1rem}
+.bloque{background:#fff;border:1px solid var(--borde);padding:1rem 1.2rem;margin:1rem 0}
+.bloque h2{margin:0 0 .6rem;font-size:1.4rem;color:var(--acento)}
+.rejilla{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:.7rem;margin-top:.8rem}
+.chip,.tarjeta{background:#fafafa;border:1px solid var(--borde);border-left:6px solid var(--c,#999);padding:.6rem .8rem;margin:0}
+.chip small{display:block;color:#555;font-size:.8rem}
+.tarjeta h3{margin:.3rem 0;font-size:1.1rem}
+.tarjeta p{margin:.3rem 0;font-size:.95rem}
+.etiqueta{display:inline-block;border:1px solid var(--borde);padding:0 .5rem;margin-right:.3rem;font-size:.8rem;background:#fff}
+.oculto{display:none}
+.tabla-scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse}
+caption{text-align:left;font-weight:bold;padding-bottom:.4rem}
+th,td{padding:.5rem;text-align:left;border:1px solid var(--borde)}
+th{background:#eee}
+
+/* Galería */
+.galeria{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:1rem;text-align:center}
+figure{margin:0}
+.foto{mix-blend-mode:multiply;display:block;width:100%;height:140px;object-fit:contain;margin:0 auto .4rem}
+.galeria--fotos{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
+.galeria--fotos .foto{height:160px}
+figcaption{font-size:.9rem;margin-top:.3rem}
+
+/* Formularios */
+form label{display:block;font-weight:bold;margin:.7rem 0 .2rem}
+input[type=text],input[type=email],input[type=number],input[type=search],select,textarea{width:100%;padding:.5rem;border:1px solid #999;font:inherit}
+fieldset{border:1px solid var(--borde);margin:1rem 0}
+fieldset label{display:inline-block;margin:.3rem 1rem .3rem 0;font-weight:normal}
+.error{color:#b00020;margin:.2rem 0;min-height:1.2rem;font-size:.9rem}
+.boton{margin-top:1rem;background:var(--acento);color:#fff;border:0;padding:.6rem 1.5rem;font:inherit;cursor:pointer}
+.boton:hover{background:#1d3566}
+#resultado .tarjeta{margin-top:1rem}
+
+/* Paginación */
+.paginacion{display:flex;margin:1.5rem 0 .5rem}
+.nav-btn{border:1px solid var(--acento);color:var(--acento);background:#fff;padding:.5rem 1rem;text-decoration:none}
+.nav-btn:hover{background:var(--acento);color:#fff}
+.nav-ant{margin-right:auto}
+.nav-sig{margin-left:auto}
+.pie{text-align:center;padding:1rem;font-size:.85rem;color:#555;border-top:1px solid var(--borde)}
+
+/* Colores por tipo */
+.t-normal{--c:#a8a77a}
+.t-fuego{--c:#ee8130}
+.t-agua{--c:#6390f0}
+.t-planta{--c:#7ac74c}
+.t-electrico{--c:#d4a300}
+.t-hielo{--c:#4fc3d0}
+.t-lucha{--c:#c22e28}
+.t-veneno{--c:#a33ea1}
+.t-tierra{--c:#c9a227}
+.t-volador{--c:#8e7bd6}
+.t-psiquico{--c:#f95587}
+.t-bicho{--c:#a6b91a}
+.t-roca{--c:#b6a136}
+.t-fantasma{--c:#735797}
+.t-dragon{--c:#6f35fc}
+.t-siniestro{--c:#705746}
+.t-acero{--c:#8a8aa8}
+.t-hada{--c:#d685ad}
+
+/* Responsive */
+@media (max-width:700px){
+  .menu-btn{display:block}
+  #menu{display:none;width:100%}
+  #menu.abierto{display:block}
+  #menu ul{flex-direction:column}
+  .cabecera h1{font-size:1.6rem}
+  .bloque{padding:.8rem}
+  th,td{padding:.4rem;font-size:.9rem}
+}
+@media (min-width:900px){.rejilla--tarjetas{grid-template-columns:repeat(3,1fr)}}

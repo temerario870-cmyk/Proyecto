@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Galería de imágenes sobre Pokémon.">
+  <title>Mundo Pokémon | Multimedia</title>
+  <link rel="icon" type="image/svg+xml" href="../imgs/favicon.svg">
+  <link rel="stylesheet" href="../css/estilos.css">
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="barra">
+      <a class="marca" href="../index.html"><img src="../imgs/pokebola.svg" alt="" width="32" height="32">Mundo Pokémon</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
+      <nav id="menu" aria-label="Menú principal"><ul><li><a href="../index.html">Inicio</a></li><li><a href="pagina2.html">Pokédex</a></li><li><a href="multimedia.html" aria-current="page">Multimedia</a></li><li><a href="registro.html">Registro</a></li></ul></nav>
+    </div>
+    <div class="cabecera">
+      <h1>Multimedia</h1>
+      <p>Galería de imágenes</p>
+    </div>
+  </header>
+  <main>
+    <section class="bloque" aria-labelledby="t-img">
+      <h2 id="t-img">Galería de imágenes</h2>
+      <div class="galeria">
+        <figure><img src="../imgs/pokebola.svg" alt="Símbolo Poké Ball" width="120" height="120" loading="lazy"><figcaption>Poké Ball</figcaption></figure>
+        <figure><img src="../imgs/rayo.svg" alt="Símbolo Eléctrico" width="120" height="120" loading="lazy"><figcaption>Eléctrico</figcaption></figure>
+        <figure><img src="../imgs/llama.svg" alt="Símbolo Fuego" width="120" height="120" loading="lazy"><figcaption>Fuego</figcaption></figure>
+        <figure><img src="../imgs/gota.svg" alt="Símbolo Agua" width="120" height="120" loading="lazy"><figcaption>Agua</figcaption></figure>
+        <figure><img src="../imgs/hoja.svg" alt="Símbolo Planta" width="120" height="120" loading="lazy"><figcaption>Planta</figcaption></figure>
+      </div>
+    </section>
+    <section class="bloque" aria-labelledby="t-poke">
+      <h2 id="t-poke">Pokémon</h2>
+      <div class="galeria galeria--fotos">
+        <figure><img class="foto" src="../imgs/bulbasaur.jpg" alt="Bulbasaur" width="215" height="215" loading="lazy"><figcaption>Bulbasaur</figcaption></figure>
+        <figure><img class="foto" src="../imgs/squirtle.jpg" alt="Squirtle" width="225" height="225" loading="lazy"><figcaption>Squirtle</figcaption></figure>
+        <figure><img class="foto" src="../imgs/pikachu.jpg" alt="Pikachu" width="199" height="253" loading="lazy"><figcaption>Pikachu</figcaption></figure>
+        <figure><img class="foto" src="../imgs/charizard.jpg" alt="Charizard" width="576" height="532" loading="lazy"><figcaption>Charizard</figcaption></figure>
+      </div>
+    </section>
+    <nav class="paginacion" aria-label="Navegación entre páginas"><a class="nav-btn nav-ant" href="pagina2.html" rel="prev">&laquo; Anterior</a><a class="nav-btn nav-sig" href="registro.html" rel="next">Siguiente &raquo;</a></nav>
+  </main>
+  <footer class="pie">
+    <p>Pokémon es marca de Nintendo, Game Freak y Creatures. Proyecto educativo · <span id="anio"></span></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Formulario de registro de entrenadores Pokémon.">
+  <title>Mundo Pokémon | Registro</title>
+  <link rel="icon" type="image/svg+xml" href="../imgs/favicon.svg">
+  <link rel="stylesheet" href="../css/estilos.css">
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="barra">
+      <a class="marca" href="../index.html"><img src="../imgs/pokebola.svg" alt="" width="32" height="32">Mundo Pokémon</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
+      <nav id="menu" aria-label="Menú principal"><ul><li><a href="../index.html">Inicio</a></li><li><a href="pagina2.html">Pokédex</a></li><li><a href="multimedia.html">Multimedia</a></li><li><a href="registro.html" aria-current="page">Registro</a></li></ul></nav>
+    </div>
+    <div class="cabecera">
+      <h1>Registro</h1>
+      <p>Formulario de registro de entrenadores</p>
+    </div>
+  </header>
+  <main>
+    <section class="bloque" aria-labelledby="t-reg">
+      <h2 id="t-reg">Registro de entrenador</h2>
+      <form id="form-entrenador" novalidate>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required minlength="3" autocomplete="name">
+        <p class="error" id="e-nombre" aria-live="polite"></p>
+
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" required autocomplete="email">
+        <p class="error" id="e-correo" aria-live="polite"></p>
+
+        <label for="edad">Edad</label>
+        <input type="number" id="edad" name="edad" min="6" max="99" required>
+        <p class="error" id="e-edad" aria-live="polite"></p>
+
+        <label for="region">Región favorita</label>
+        <select id="region" name="region">
+          <option>Kanto</option><option>Johto</option><option>Hoenn</option><option>Sinnoh</option><option>Teselia</option><option>Kalos</option><option>Alola</option><option>Galar</option><option>Paldea</option>
+        </select>
+
+        <fieldset>
+          <legend>Tu Pokémon inicial</legend>
+          <label><input type="radio" name="inicial" value="planta" checked> Bulbasaur</label>
+          <label><input type="radio" name="inicial" value="fuego"> Charmander</label>
+          <label><input type="radio" name="inicial" value="agua"> Squirtle</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Tipos favoritos (elige al menos uno)</legend>
+          <label><input type="checkbox" name="tipos" value="Fuego"> Fuego</label>
+          <label><input type="checkbox" name="tipos" value="Agua"> Agua</label>
+          <label><input type="checkbox" name="tipos" value="Planta"> Planta</label>
+          <label><input type="checkbox" name="tipos" value="Eléctrico"> Eléctrico</label>
+          <label><input type="checkbox" name="tipos" value="Psíquico"> Psíquico</label>
+        </fieldset>
+        <p class="error" id="e-tipos" aria-live="polite"></p>
+
+        <label for="mensaje">¿Por qué quieres ser entrenador?</label>
+        <textarea id="mensaje" name="mensaje" rows="3" maxlength="200"></textarea>
+
+        <button type="submit" class="boton">Registrarme</button>
+      </form>
+      <div id="resultado" aria-live="polite"></div>
+    </section>
+    <nav class="paginacion" aria-label="Navegación entre páginas"><a class="nav-btn nav-ant" href="multimedia.html" rel="prev">&laquo; Anterior</a></nav>
+  </main>
+  <footer class="pie">
+    <p>Pokémon es marca de Nintendo, Game Freak y Creatures. Proyecto educativo · <span id="anio"></span></p>
+  </footer>
+  <a href="../index.html">volver a la pagina anterior</a>
+</body>
+</html>

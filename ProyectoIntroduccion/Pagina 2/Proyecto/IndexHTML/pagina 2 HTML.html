@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Información general sobre Pokémon: qué es, conceptos básicos, tipos e iniciales de Kanto.">
+  <title>Mundo Pokémon | Inicio</title>
+  <link rel="icon" type="image/svg+xml" href="../imgs/favicon.svg">
+  <link rel="stylesheet" href="../css/estilos.css">
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="barra">
+      <a class="marca" href="index.html"><img src="../imgs/pokebola.svg" alt="" width="32" height="32">Mundo Pokémon</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
+      <nav id="menu" aria-label="Menú principal"><ul><li><a href="index.html" aria-current="page">Inicio</a></li><li><a href="/Pagina 2/Proyecto/pags/pagina2.html">Pokédex</a></li><li><a href="../pags/multimedia.html">Multimedia</a></li><li><a href="/Pagina 2/Proyecto/pags/registro.html">Registro</a></li></ul></nav>
+    </div>
+    <div class="cabecera">
+      <h1>Pokémon</h1>
+      <p>Información general sobre la franquicia</p>
+    </div>
+  </header>
+  <main>
+    <section class="bloque" aria-labelledby="t-que">
+      <h2 id="t-que">¿Qué es Pokémon?</h2>
+      <p>Pokémon (abreviatura de <strong>Pocket Monsters</strong>) es una franquicia japonesa creada por <strong>Satoshi Tajiri</strong> y desarrollada por Game Freak. Nació el <time datetime="1996-02-27">27 de febrero de 1996</time> con los juegos <cite>Pokémon Rojo y Verde</cite> para Game Boy. Hoy incluye videojuegos, anime, cartas, películas y juguetes.</p>
+      <p>Los <strong>entrenadores</strong> capturan Pokémon con Poké Balls, los entrenan, los hacen combatir y evolucionar.</p>
+    </section>
+    <section class="bloque" aria-labelledby="t-basicos">
+      <h2 id="t-basicos">Conceptos básicos</h2>
+      <dl>
+        <dt>Poké Ball</dt><dd>Esfera donde se captura y guarda a los Pokémon.</dd>
+        <dt>Evolución</dt><dd>Cambio de forma al subir de nivel, con piedras o por amistad (Pikachu → Raichu).</dd>
+        <dt>Gimnasios</dt><dd>Líderes que te retan para ganar medallas.</dd>
+        <dt>Liga Pokémon</dt><dd>Torneo final con la Élite Cuatro y el Campeón.</dd>
+      </dl>
+    </section>
+    <section class="bloque" aria-labelledby="t-tipos">
+      <h2 id="t-tipos">Los 18 tipos</h2>
+      <p>Cada tipo tiene fortalezas y debilidades.</p>
+      <ul class="rejilla sin-vineta" id="tipos"></ul>
+    </section>
+    <section class="bloque" aria-labelledby="t-ini">
+      <h2 id="t-ini">Iniciales de Kanto</h2>
+      <div class="rejilla rejilla--tarjetas">
+        <article class="tarjeta t-planta" data-nombre="bulbasaur #001" data-tipos="planta veneno">
+          <img class="foto" src="/Pagina 2/Proyecto/imgs/bulbasaur.jpg" alt="Bulbasaur, Pokémon Planta y Veneno" width="215" height="215" loading="lazy">
+          <h3>Bulbasaur #001</h3><span class="etiqueta">Planta</span><span class="etiqueta">Veneno</span><p>Lleva una semilla en el lomo que crece con él.</p>
+        </article>
+        <article class="tarjeta t-fuego" data-nombre="charmander #004" data-tipos="fuego">
+          <img src="/Pagina 2/Proyecto/imgs/llama.svg" alt="Símbolo de tipo Fuego" width="56" height="56">
+          <h3>Charmander #004</h3><span class="etiqueta">Fuego</span><p>La llama de su cola indica su salud y su ánimo.</p>
+        </article>
+        <article class="tarjeta t-agua" data-nombre="squirtle #007" data-tipos="agua">
+          <img class="foto" src="/Pagina 2/Proyecto/imgs/squirtle.jpg" alt="Squirtle, Pokémon Agua" width="225" height="225" loading="lazy">
+          <h3>Squirtle #007</h3><span class="etiqueta">Agua</span><p>Se esconde en su caparazón y lanza chorros a presión.</p>
+        </article>
+      </div>
+    </section>
+    <nav class="paginacion" aria-label="Navegación entre páginas"><a class="nav-btn nav-sig" href="../pags/pagina2.html" rel="next">Siguiente &raquo;</a></nav>
+  </main>
+  <footer class="pie">
+    <p>Pokémon es marca de Nintendo, Game Freak y Creatures. Proyecto educativo · <span id="anio"></span></p>
+  </footer>
+  <a href="/Pagina 1/index.html.html">volver a la pagina anterior</a>
+  
+</body>
+</html>

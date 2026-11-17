@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Generaciones, Pokémon destacados y datos de Pokémon.">
+  <title>Mundo Pokémon | Pokédex</title>
+  <link rel="icon" type="image/svg+xml" href="../imgs/favicon.svg">
+  <link rel="stylesheet" href="../css/estilos.css">
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="barra">
+      <a class="marca" href="../index.html"><img src="../imgs/pokebola.svg" alt="" width="32" height="32">Mundo Pokémon</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
+      <nav id="menu" aria-label="Menú principal"><ul><li><a href="../index.html">Inicio</a></li><li><a href="pagina2.html" aria-current="page">Pokédex</a></li><li><a href="multimedia.html">Multimedia</a></li><li><a href="registro.html">Registro</a></li></ul></nav>
+    </div>
+    <div class="cabecera">
+      <h1>Pokédex</h1>
+      <p>Generaciones, Pokémon destacados y datos</p>
+    </div>
+  </header>
+  <main>
+    <section class="bloque" aria-labelledby="t-gen">
+      <h2 id="t-gen">Las generaciones</h2>
+      <div class="tabla-scroll">
+        <table>
+          <caption>Generaciones de juegos principales</caption>
+          <thead><tr><th scope="col">Gen</th><th scope="col">Región</th><th scope="col">Año</th><th scope="col">Pokémon nuevos</th></tr></thead>
+          <tbody>
+            <tr><td>I</td><td>Kanto</td><td>1996</td><td>151</td></tr>
+            <tr><td>II</td><td>Johto</td><td>1999</td><td>100</td></tr>
+            <tr><td>III</td><td>Hoenn</td><td>2002</td><td>135</td></tr>
+            <tr><td>IV</td><td>Sinnoh</td><td>2006</td><td>107</td></tr>
+            <tr><td>V</td><td>Teselia</td><td>2010</td><td>156</td></tr>
+            <tr><td>VI</td><td>Kalos</td><td>2013</td><td>72</td></tr>
+            <tr><td>VII</td><td>Alola</td><td>2016</td><td>88</td></tr>
+            <tr><td>VIII</td><td>Galar / Hisui</td><td>2019</td><td>96</td></tr>
+            <tr><td>IX</td><td>Paldea</td><td>2022</td><td>120</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="bloque" aria-labelledby="t-fam">
+      <h2 id="t-fam">Pokémon destacados</h2>
+      <form class="filtros" role="search">
+        <label for="buscador">Buscar por nombre o tipo</label>
+        <input type="search" id="buscador" placeholder="Ej: pikachu, fuego">
+        <label for="filtro-tipo">Tipo</label>
+        <select id="filtro-tipo"><option value="">Todos</option></select>
+      </form>
+      <p id="resultados" aria-live="polite"></p>
+      <div class="rejilla rejilla--tarjetas" id="catalogo">
+        <article class="tarjeta t-electrico" data-nombre="pikachu #025" data-tipos="eléctrico">
+          <img class="foto" src="../imgs/pikachu.jpg" alt="Pikachu, Pokémon Eléctrico" width="199" height="253" loading="lazy">
+          <h3>Pikachu #025</h3><span class="etiqueta">Eléctrico</span><p>La mascota oficial. Almacena electricidad en sus mejillas.</p>
+        </article>
+        <article class="tarjeta t-psiquico" data-nombre="mewtwo #150" data-tipos="psíquico">
+          <img src="../imgs/pokebola.svg" alt="Símbolo de tipo Psíquico" width="56" height="56">
+          <h3>Mewtwo #150</h3><span class="etiqueta">Psíquico</span><p>Creado por ingeniería genética a partir de Mew.</p>
+        </article>
+        <article class="tarjeta t-fuego" data-nombre="charizard #006" data-tipos="fuego volador">
+          <img class="foto" src="../imgs/charizard.jpg" alt="Charizard, Pokémon Fuego y Volador" width="576" height="532" loading="lazy">
+          <h3>Charizard #006</h3><span class="etiqueta">Fuego</span><span class="etiqueta">Volador</span><p>Vuela alto; su fuego arde más con cada combate.</p>
+        </article>
+        <article class="tarjeta t-hada" data-nombre="jigglypuff #039" data-tipos="normal hada">
+          <img src="../imgs/pokebola.svg" alt="Símbolo de tipo Normal" width="56" height="56">
+          <h3>Jigglypuff #039</h3><span class="etiqueta">Normal</span><span class="etiqueta">Hada</span><p>Su canto hace dormir a quien lo escucha.</p>
+        </article>
+        <article class="tarjeta t-normal" data-nombre="snorlax #143" data-tipos="normal">
+          <img src="../imgs/pokebola.svg" alt="Símbolo de tipo Normal" width="56" height="56">
+          <h3>Snorlax #143</h3><span class="etiqueta">Normal</span><p>Come cientos de kilos al día y duerme sin parar.</p>
+        </article>
+        <article class="tarjeta t-lucha" data-nombre="lucario #448" data-tipos="lucha acero">
+          <img src="../imgs/pokebola.svg" alt="Símbolo de tipo Lucha" width="56" height="56">
+          <h3>Lucario #448</h3><span class="etiqueta">Lucha</span><span class="etiqueta">Acero</span><p>Percibe y controla el aura de los seres vivos.</p>
+        </article>
+      </div>
+    </section>
+    <section class="bloque" aria-labelledby="t-mas">
+      <h2 id="t-mas">Más allá de los juegos</h2>
+      <ol>
+        <li><strong>Anime:</strong> estrenado en 1997; Ash y Pikachu recorrieron el mundo durante 25 años.</li>
+        <li><strong>Cartas (TCG):</strong> desde 1996; algunas valen cientos de miles de dólares.</li>
+        <li><strong>Pokémon GO:</strong> juego de realidad aumentada de 2016.</li>
+        <li><strong>Películas:</strong> más de 20, incluida <cite>Detective Pikachu</cite> (2019).</li>
+      </ol>
+    </section>
+    <aside class="bloque" aria-labelledby="t-cur">
+      <h2 id="t-cur">Curiosidades</h2>
+      <ul>
+        <li>Kanto se inspira en la región real de Kantō, en Japón.</li>
+        <li>Pikachu viene de <i>pika</i> (chispa) y <i>chu</i> (chillido de ratón).</li>
+        <li>Arceus es el Pokémon creador del universo.</li>
+      </ul>
+    </aside>
+    <nav class="paginacion" aria-label="Navegación entre páginas"><a class="nav-btn nav-ant" href="../index.html" rel="prev">&laquo; Anterior</a><a class="nav-btn nav-sig" href="multimedia.html" rel="next">Siguiente &raquo;</a></nav>
+  </main>
+  <footer class="pie">
+    <p>Pokémon es marca de Nintendo, Game Freak y Creatures. Proyecto educativo · <span id="anio"></span></p>
+  </footer>
+</body>
+</html>
